@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  parallel="tests" thread-count="2">
+    <!--parallel="tests" thread-count="2"-->
+
+    <test verbose="2" preserve-order="true" name="lambdaautomationdemo1">
+        <classes>
+            <class name="TCs.lambdatestscenario">
+                <methods>
+                    <parameter name="browser" value="chrome"></parameter>
+                    <include name="realscenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="lambdaautomationdemo2">
+        <classes>
+            <class name="TCs.lambdatestscenario">
+                <methods>
+                    <parameter name="browser" value="safari"></parameter>
+                    <include name="realscenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
