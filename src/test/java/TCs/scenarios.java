@@ -64,8 +64,13 @@ public class scenarios {
     }
 
     public void scrolldown(){
-        JavascriptExecutor js = (JavascriptExecutor) h.getdriver();
-        js.executeScript("window.scrollBy(0,500)");
+        try{
+            JavascriptExecutor js = (JavascriptExecutor) h.getdriver();
+            js.executeScript("window.scrollBy(0,500)");
+        }catch (Exception   e){
+            
+        }
+
     }
 
     public void filltheform(){

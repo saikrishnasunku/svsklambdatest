@@ -75,8 +75,13 @@ public class lambdatestscenario {
 
     @AfterMethod
     public void cleanup() throws InterruptedException {
-        Thread.sleep(3000);
-        h.getdriver().close();
+        try{
+            Thread.sleep(3000);
+            h.getdriver().close();
+        }catch (Exception   e){
+
+        }
+
 //        h.getdriver().quit();
 //        driverThreadLocal.set(null);
     }
